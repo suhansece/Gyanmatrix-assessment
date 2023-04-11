@@ -10,7 +10,7 @@
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image:  linear-gradient(rgb(28, 27, 27),rgba(14, 14, 15, 0.8) ),url('images/298cd4ffd68b87514b6cd7e390ac5279\ 1.png');
+    background-image:  linear-gradient(rgb(28, 27, 27),rgba(14, 14, 15, 0.8) ),url("images/photo_2023-04-11_10-26-40.jpg");
 }
 #header{
     position: relative;
@@ -83,6 +83,5 @@ font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 19px;
-/* identical to box height */
 color: #DCDCDC;
 }
