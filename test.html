@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Looping Div Contents Example</title>
+  </head>
+  <body>
+    <!-- The existing div element -->
+    <div id="existingDiv">
+      <p>Statement 1</p>
+      <p>Statement 2</p>
+      <p>Statement 3</p>
+    </div>
+    
+    <!-- The container div element -->
+    <div id="container">
+      <!-- The cloned div elements will be appended here -->
+    </div>
+    
+    <!-- JavaScript code to clone and append the div element contents -->
+    <script>
+      // get the existing div element
+      var existingDiv = document.getElementById("existingDiv");
+
+      // get the container element where the divs will be added
+      var container = document.getElementById("container");
+
+      // set the number of times to loop
+      var numTimes = 5;
+
+      // loop through the number of times
+      for (var i = 0; i < numTimes; i++) {
+        // create a new div element
+        var clonedDiv = document.createElement("div");
+        
+        // loop through the statements inside the existing div element
+        for (var j = 0; j < existingDiv.children.length; j++) {
+          // create a new p element
+          var p = document.createElement("p");
+          
+          // set the content of the p element to the statement inside the existing div element
+          p.innerHTML = existingDiv.children[j].innerHTML;
+          
+          // append the p element to the cloned div element
+          clonedDiv.appendChild(p);
+        }
+        
+        // append the cloned div element to the container
+        container.appendChild(clonedDiv);
+      }
+    </script>
+  </body>
+</html>

@@ -29,6 +29,7 @@ width: 100%;
     flex-wrap: wrap;
     grid-template-columns: auto auto auto ;
     padding: 10px 35px;
+    margin-bottom: 50px;
 }
 .info-img{
     position: relative;
@@ -48,10 +49,11 @@ width: 100%;
 }
 .info-img p{
     position: absolute;
-    left: 96px;
+    left: 80px;
     bottom: 10px; 
     position: absolute;
    height: 31px;
+   width: 190px;
 
 font-family: 'Pirata One';
 font-style: normal;
