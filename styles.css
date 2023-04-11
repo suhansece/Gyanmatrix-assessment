@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.loginbody{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image:  linear-gradient(rgb(28, 27, 27),rgba(14, 14, 15, 0.8) ),url('images/298cd4ffd68b87514b6cd7e390ac5279\ 1.png');
+}
+#header{
+    position: relative;
+}
+#header img{
+   position: absolute;
+   width: 266px;
+   height: 116.51px;
+   left: 29px;
+   top: 13px;
+} 
+.logincontainer{
+    position: absolute;
+    width: 521px;
+    height: 502px;
+    left: 100px;
+    top: 212px;
+    text-align: center;
+}
+
+.logincontainer h1{
+text-align: center;
+margin-bottom: 20px ;
+color: #DCDCDC;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 64px;
+line-height: 75px;
+
+}
+.logincontainer input{
+    width: 100%;
+    height: 80px;
+    border: 1px solid #FCF291;
+   border-radius: 38px;
+   padding: 20px;
+   font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+margin: 14px 0;
+background: transparent;
+}
+.logincontainer button{
+width: 521px;
+height: 80px;
+
+border-radius: 38px;
+
+background: #FFCD2D;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+margin-top: 50px;
+color: #000000;
+}
+.loginbody p{
+position: absolute;
+width: 200px;
+height: 19px;
+left: 1265.56px;
+bottom: 0;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+color: #DCDCDC;
+}
