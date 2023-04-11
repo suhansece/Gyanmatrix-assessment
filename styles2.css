@@ -7,7 +7,15 @@
 }
 .container{
 position: relative;
-width: 100%;
+
+}
+.container nav img{
+    flex-basis: 45%;
+    margin-left: 38px;
+    width: 100%;
+    background: transparent;
+
+
 }
 .container nav{
     display: flex;
@@ -16,11 +24,14 @@ width: 100%;
 .buttondiv{
     display: flex;
     justify-items: center;
+    flex-basis: 30%;
+    
 }
 .buttondiv a{
-    width: 217px;
-    height: 83px;
-    margin-right: 20px;
+    width: 190px;
+    background: transparent;
+    margin-right: 90px;
+    height: 100%;
 }
 .info{
     display: grid;
@@ -28,11 +39,14 @@ width: 100%;
     height: 353px;
     flex-wrap: wrap;
     grid-template-columns: auto auto auto ;
-    padding: 10px 35px;
-    margin-bottom: 50px;
+    padding: 10px 0px;
+    align-items: center;
 }
 .info-img{
     position: relative;
+    width: 362px;
+    height: 353px;
+    margin-bottom: 45px;
 }
 .info-imgframe{
     position: absolute;
@@ -54,7 +68,6 @@ width: 100%;
     position: absolute;
    height: 31px;
    width: 190px;
-
 font-family: 'Pirata One';
 font-style: normal;
 font-weight: 400;
@@ -62,9 +75,34 @@ font-size: 24px;
 line-height: 31px;
 background: #E0C667;
 text-align: center;
-/* identical to box height */
-
 padding: 0 20px;
-
 color: #000000;
+}
+
+
+
+
+/* media  1140*/
+
+@media only screen and (max-width: 1140px){
+    .info{
+        grid-template-columns: auto auto ;
+    }
+    .buttondiv a{
+        width: 100px;
+        background: transparent;
+        margin-right: 90px;
+    }
+    .buttondiv{
+        flex-basis: 50%;
+        
+    }
+}
+
+
+/*  media 600 */
+@media only screen and (max-width: 600px){
+    .info{
+        grid-template-columns: auto ;
+    }
 }

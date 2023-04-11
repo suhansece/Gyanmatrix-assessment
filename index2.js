@@ -44,4 +44,8 @@ const fetchPokeData = () => {
        
     })}
 
+
+    //details
+
+
     fetchPokeData();
