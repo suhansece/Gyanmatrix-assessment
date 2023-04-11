@@ -1,4 +1,4 @@
-
+/* 
 const usernames={"gender":"female","name":{"title":"Miss","first":"Peremisla","last":"Guchok"},
 "location":{"street":{"number":5121,"name":"Tamanska"},
 "city":"Horol","state":"Chernivecka","country":"Ukraine","postcode":33932,"coordinates":{"latitude":"76.9824","longitude":"179.4909"},
@@ -8,9 +8,19 @@ const usernames={"gender":"female","name":{"title":"Miss","first":"Peremisla","l
 "dob":{"date":"1951-02-21T12:42:26.913Z","age":72},"registered":{"date":"2008-07-22T21:40:22.738Z","age":14},
 "phone":"(098) N57-3776","cell":"(066) Z50-8351","id":{"name":"","value":null},
 "picture":{"large":"https://randomuser.me/api/portraits/women/6.jpg","medium":"https://randomuser.me/api/portraits/med/women/6.jpg",
-"thumbnail":"https://randomuser.me/api/portraits/thumb/women/6.jpg"},"nat":"UA"}
+"thumbnail":"https://randomuser.me/api/portraits/thumb/women/6.jpg"},"nat":"UA"}; */
 
 function myFunction() {
-      window.open('students.html');
-    
+    alert("*******************");
+      const names=document.querySelector('#name').value;
+      const passwords=document.querySelector('#password').value;
+      if(names==usernames.login.username && passwords==usernames.login.password){
+        alert("if");
+
+        window.location.assign("students.html");
+      }
+      else{
+        alert("else");
+      }
+     
   }
