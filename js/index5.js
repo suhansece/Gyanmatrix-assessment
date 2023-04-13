@@ -11,12 +11,36 @@ const patronus=document.querySelector(".patronus");
 const detailimage=document.querySelector("#detailimage");
 const houseImage=document.querySelector("#typesimage");
 const namesh1=document.querySelector("h2");
+const bodybackground=document.querySelector("body");
+const detailsbackground=document.querySelector(".details");
+
+const backgroundcolor=[
+    {
+        "house":"Gryffindor",
+        "color1":"#FFECE8","color2":"#9C1801"
+    },
+   {
+        "house":"Slytherin",
+        "color1":"#F5F5F5","color2":"#148341"
+    },
+    {
+        "house":"Hufflepuff",
+        "color1":"#F5F5F5","color2":"#E8AF17"
+    },
+   {
+        "house":"Ravenclaw",
+        "color1":"#F5F5F5","color2":"#3DB2D3"
+    }
+]
 
 const fetchstaffstudents = () => {
-    fetch('https://hp-api.onrender.com/api/characters/staff')
+    fetch('https://hp-api.onrender.com/api/characters/students')
     .then(res => res.json())
     .then(data => {
-        const datas=data[5]
+
+        //when we change the value of index students details house logo ans background color get changes
+        const index=3;
+        const datas=data[index];
         //house image
         const houseimagesrc="images/house image/"+datas.house+".png";
         houseImage.src=houseimagesrc;
@@ -24,7 +48,7 @@ const fetchstaffstudents = () => {
         // name 
         namesh1.textContent=datas.name;
 
-
+       
         species.innerHTML=datas.species;
         if(species.innerHTML==""){
             species.innerHTML="NULL";
@@ -58,6 +82,16 @@ const fetchstaffstudents = () => {
         patronus.innerHTML=datas.patronus;
         if(patronus.innerHTML==""){
             patronus.innerHTML="NULL";
+        }
+
+
+        // background color
+        for(var i=0;i<4;i++){
+            if(backgroundcolor[i].house==datas.house){
+                bodybackground.style.background =backgroundcolor[i].color1;
+                detailsbackground.style.background=backgroundcolor[i].color2;
+                break;
+            }
         }
     });
 

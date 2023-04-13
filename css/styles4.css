@@ -6,7 +6,7 @@
    
 }
 body{
-    background-color: #defafa;
+    
 }
 .logo{
     
@@ -17,14 +17,12 @@ body{
     top: 13px;
 }
 .container{
-    background-color: #defafa;
     height: 100%;
 }
 .details{   
 width: 70%;
 border-radius: 29px;
-
-    background-color: #3DB2D3;
+    
     margin: 0 auto;
     margin-top: -105px;
     border-radius: 29px;

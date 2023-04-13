@@ -49,9 +49,9 @@ const fetchData = () => {
    
    fetchData();
    // Get the div element by its id
-   const detaildivs = document.getElementById("info-img");
-   for(const detaildiv of detaildivs){
-  detaildiv.addEventListener("click", function(event) {
+   const detaildivs = document.querySelector("#info-img");
+   for(var i=0;i<6;i++){
+  detaildivs[i].addEventListener("click", function(event) {
   const clickedElement = event.target;
   const clickedId = clickedElement.id;  
 });
