@@ -1,5 +1,5 @@
 const imagerow=document.querySelector(".info");
-const fetchPokeData = () => {
+const fetchData = () => {
     fetch('https://hp-api.onrender.com/api/characters/students')
     .then(res => res.json())
     .then(data => {
@@ -44,4 +44,4 @@ const fetchPokeData = () => {
        
     })}
 
-    fetchPokeData();
+    fetchData();

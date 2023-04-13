@@ -1,5 +1,5 @@
 const imagerow=document.querySelector(".info");
-const fetchPokeData = () => {
+const fetchData = () => {
     fetch('https://hp-api.onrender.com/api/characters/staff')
     .then(res => res.json())
     .then(data => {
@@ -30,6 +30,7 @@ const fetchPokeData = () => {
            infodiv.classList.add('info-img');
            infoBackgroudclone.classList.add('info-background');
            infoFrameclone.classList.add('info-imgframe');
+           infodiv.setAttribute("id", i);
          //adding src for imgs
            infoBackgroudclone.src='images/Rectangle 45.png';
            infoFrameclone.src='images/photo_2023-03-13_20-57-50 1.png';
@@ -43,9 +44,20 @@ const fetchPokeData = () => {
        }
        
     })}
+   // details view
+
+   
+   fetchData();
+   // Get the div element by its id
+   const detaildivs = document.getElementById("info-img");
+   for(const detaildiv of detaildivs){
+  detaildiv.addEventListener("click", function(event) {
+  const clickedElement = event.target;
+  const clickedId = clickedElement.id;  
+});
+
+   }
 
 
-    //details
 
-
-    fetchPokeData();
+   
