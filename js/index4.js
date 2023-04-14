@@ -1,5 +1,4 @@
-
-const species=document.querySelector(".species");
+const speciesd=document.querySelector(".species");
 const gender=document.querySelector(".gender");
 const house=document.querySelector(".house");
 const dob=document.querySelector(".dob");
@@ -33,13 +32,13 @@ const backgroundcolor=[
             "color1":"#F5F5F5","color2":"#3DB2D3"
         }
 ]
-
-const fetchstaffstudents = () => {
+const detais = () => {
     fetch('https://hp-api.onrender.com/api/characters/staff')
     .then(res => res.json())
     .then(data => {
-
-        const index=2;
+        
+        
+        const index=1;
         const datas=data[index];
         //house image
         const houseimagesrc="images/house image/"+datas.house+".png";
@@ -49,9 +48,9 @@ const fetchstaffstudents = () => {
         namesh1.textContent=datas.name;
 
        
-        species.innerHTML=datas.species;
-        if(species.innerHTML==""){
-            species.innerHTML="NULL";
+        speciesd.innerHTML=datas.species;
+        if(speciesd.innerHTML==""){
+            speciesd.innerHTML="NULL";
         }
         gender.innerHTML=datas.gender; 
         house.innerHTML=datas.house;
@@ -96,4 +95,5 @@ const fetchstaffstudents = () => {
     });
 
 }
-fetchstaffstudents();
+
+detais();

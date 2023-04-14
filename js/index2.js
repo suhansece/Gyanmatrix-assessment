@@ -1,4 +1,6 @@
+
 const imagerow=document.querySelector(".info");
+
 const fetchData = () => {
     fetch('https://hp-api.onrender.com/api/characters/staff')
     .then(res => res.json())
@@ -21,13 +23,16 @@ const fetchData = () => {
             if(f==1){
                 infoName.textContent+=names[j];
             }
-           }
+           } 
            f=0;
            infoImage.src=data[i].image;
            //add class list
            infoImage.classList.add('info-image');
            infoName.classList.add('info-name');
            infodiv.classList.add('info-img');
+           infodiv.onclick = function(){
+            details(infodiv.id);
+           };
            infoBackgroudclone.classList.add('info-background');
            infoFrameclone.classList.add('info-imgframe');
            infodiv.setAttribute("id", i);
@@ -39,24 +44,22 @@ const fetchData = () => {
            infodiv.appendChild(infoName);
            infodiv.appendChild(infoBackgroudclone);
            infodiv.appendChild(infoFrameclone);
-           
            imagerow.appendChild(infodiv);
        }
        
     })}
-   // details view
-
-   
    fetchData();
-   // Get the div element by its id
-   const detaildivs = document.querySelector("#info-img");
-   for(var i=0;i<6;i++){
-  detaildivs[i].addEventListener("click", function(event) {
-  const clickedElement = event.target;
-  const clickedId = clickedElement.id;  
-});
 
+
+
+   //details
+   
+    const details=(id) =>{
+    console.log(id);
+   //window.location.assign("staff details.html");
    }
+   
+   
 
 
 

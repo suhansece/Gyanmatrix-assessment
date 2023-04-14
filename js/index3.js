@@ -28,8 +28,12 @@ const fetchData = () => {
            infoImage.classList.add('info-image');
            infoName.classList.add('info-name');
            infodiv.classList.add('info-img');
+           infodiv.onclick = function(){
+            details(infodiv.id);
+           };
            infoBackgroudclone.classList.add('info-background');
            infoFrameclone.classList.add('info-imgframe');
+           infodiv.setAttribute("id", i);
          //adding src for imgs
            infoBackgroudclone.src='images/Rectangle 45.png';
            infoFrameclone.src='images/photo_2023-03-13_20-57-50 1.png';
@@ -45,3 +49,10 @@ const fetchData = () => {
     })}
 
     fetchData();
+
+    //details
+   
+    const details=(id) =>{
+        console.log(id);
+       //window.location.assign("staff details.html");
+       }
